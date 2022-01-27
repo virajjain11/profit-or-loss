@@ -8,7 +8,7 @@ var output = document.querySelector("#output-box");
 function profitOrLoss(stocks, initial, quantity, current) {
     if (initial < 1 || quantity < 1 || current < 1) {
         // incorrect input 
-        giveMsg(`please enter all the input`)
+        giveMsg(`please enter all the input!`)
 
     } else {
         if (initial > current) {
@@ -55,10 +55,15 @@ function giveMsg(message, val) {
             output.innerText = message;
             output.style.color = 'green';
             break;
+            case (0):
+            output.innerText = message;
+            output.style.color = 'blue';
+            break;
+            
 
         default:
             output.innerText = message;
-            output.style.color = 'grey';
+            output.style.color = '';
             break;
     }
 }
